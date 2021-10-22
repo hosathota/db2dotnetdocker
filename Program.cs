@@ -7,7 +7,7 @@ namespace DockerTester
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Starting db2 app");
+            Console.WriteLine("Starting db2 app 2");
             try
             {
                 DB2Connection connection = new DB2Connection("server=dddd:454545;uid=def;pwd=fdfd;database=defg;SECURITY=SSL;");
