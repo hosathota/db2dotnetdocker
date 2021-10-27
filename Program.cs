@@ -8,7 +8,7 @@ namespace DockerTester
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Starting db2 app 2");
+            Console.WriteLine("Starting db2 app 4");
             string path = Directory.GetCurrentDirectory();
             Console.WriteLine("The current directory is {0}", path);
             
