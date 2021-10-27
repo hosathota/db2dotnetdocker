@@ -12,6 +12,13 @@ namespace DockerTester
             string path = Directory.GetCurrentDirectory();
             Console.WriteLine("The current directory is {0}", path);
             
+            string[] directories = Directory.GetDirectories(path);
+
+                foreach(string dir in directories)
+                {
+                    Console.WriteLine("The sub directory is {0}", dir);
+                }
+            
             try
             {
                 DB2Connection connection = new DB2Connection("server=dddd:454545;uid=def;pwd=fdfd;database=defg;SECURITY=SSL;");
