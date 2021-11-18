@@ -21,7 +21,7 @@ namespace DockerTester
             
             Console.WriteLine("Before setting : LD_LIBRARY_PATH is {0}", Environment.GetEnvironmentVariable("LD_LIBRARY_PATH"));
             
-            Environment.SetEnvironmentVariable("LD_LIBRARY_PATH", path+@"/clidriver/lib/");
+            Environment.SetEnvironmentVariable("LD_LIBRARY_PATH", path+@"/clidriver/lib");
             
             Console.WriteLine("The LD_LIBRARY_PATH is {0}", Environment.GetEnvironmentVariable("LD_LIBRARY_PATH"));
             
