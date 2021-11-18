@@ -1,6 +1,7 @@
 using System;
 using IBM.Data.DB2.Core;
 using System.IO;
+using System.Diagnostics;
 
 namespace DockerTester
 {
@@ -24,6 +25,10 @@ namespace DockerTester
             Environment.SetEnvironmentVariable("LD_LIBRARY_PATH", path+@"/clidriver/lib");
             
             Console.WriteLine("The LD_LIBRARY_PATH is {0}", Environment.GetEnvironmentVariable("LD_LIBRARY_PATH"));
+            
+            ProcessStartInfo startInfo = new ProcessStartInfo() { FileName = "/bin/bash", Arguments = "ls", };
+                Process proc = new Process() { StartInfo = startInfo, };
+                proc.Start();
             
             try
             {
