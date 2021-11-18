@@ -7,7 +7,8 @@ WORKDIR /app
 #ENV LD_LIBRARY_PATH="/app/bin/x64/Debug/netcoreapp3.1/clidriver/lib"
 #ENV LD_LIBRARY_PATH="/opt/app-root/src/bin/Release/netcoreapp3.1/clidriver/lib"
 #ENV LD_LIBRARY_PATH="/opt/app-root/app/clidriver/lib"
-ENV LD_LIBRARY_PATH="/opt/app-root/app/bin/x64/Debug/netcoreapp3.1/clidriver/lib"
+#ENV LD_LIBRARY_PATH="/opt/app-root/app/bin/x64/Debug/netcoreapp3.1/clidriver/lib"
+ENV LD_LIBRARY_PATH="/opt/app-root/app/clidriver/lib/"
 
 RUN apt-get -y update && apt-get install -y libxml2
 
@@ -29,6 +30,6 @@ COPY --from=publish /app/publish .
 #Env PATH=$PATH:"/app/bin/x64/Debug/net5.0/clidriver/bin:/app/bin/x64/Debug/net5.0/clidriver/lib"
 #Env PATH=$PATH:"/app/bin/x64/Debug/netcoreapp3.1/clidriver/bin:/app/bin/x64/Debug/netcoreapp3.1/clidriver/lib"
 #Env PATH=$PATH:"/opt/app-root/app/clidriver/bin:/opt/app-root/app/clidriver/lib"
-Env PATH=$PATH:"/opt/app-root/app/bin/x64/Debug/netcoreapp3.1/clidriver/bin:/opt/app-root/app/bin/x64/Debug/netcoreapp3.1/clidriver/lib"
+Env PATH=$PATH:"/opt/app-root/app/bin/x64/Debug/netcoreapp3.1/clidriver/bin:/opt/app-root/app/clidriver/lib/:/opt/app-root/app/bin/x64/Debug/netcoreapp3.1/clidriver/lib"
 
 ENTRYPOINT ["dotnet", "DockerTester.dll"]
