@@ -19,6 +19,8 @@ namespace DockerTester
                     Console.WriteLine("The sub directory is {0}", dir);
                 }
             
+            Console.WriteLine("The LD_LIBRARY_PATH is {0}", Environment.GetEnvironmentVariable("LD_LIBRARY_PATH"));
+            
             try
             {
                 DB2Connection connection = new DB2Connection("server=dddd:454545;uid=def;pwd=fdfd;database=defg;SECURITY=SSL;");
