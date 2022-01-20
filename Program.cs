@@ -16,8 +16,9 @@ namespace DockerTester
             string port=Environment.GetEnvironmentVariable("port");
             string uid=Environment.GetEnvironmentVariable("uid");
             string pwd=Environment.GetEnvironmentVariable("pwd");
+            string database=Environment.GetEnvironmentVariable("database");
             
-            Console.WriteLine("The connection details are server, port, uid, pwd : {0} , {1}, {2}, {3}", server, port, uid,pwd );    
+            Console.WriteLine("The connection details are server, port, uid, pwd, database : {0} , {1}, {2}, {3}, {4}", server, port, uid,pwd, database );    
             
             try
             {
