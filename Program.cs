@@ -12,6 +12,12 @@ namespace DockerTester
             Console.WriteLine("Starting db2 app");
             string path = Directory.GetCurrentDirectory();
             Console.WriteLine("The current directory is {0}", path);                  
+            string server=Environment.GetEnvironmentVariable("server");
+            string port=Environment.GetEnvironmentVariable("port");
+            string uid=Environment.GetEnvironmentVariable("uid");
+            string pwd=Environment.GetEnvironmentVariable("pwd");
+            
+            Console.WriteLine("The connection details are server, port, uid, pwd : {0} , {1}, {2}, {3}", server, port, uid,pwd );    
             
             try
             {
