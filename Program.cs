@@ -20,6 +20,7 @@ namespace DockerTester
             
             Console.WriteLine("The connection details are server, port, uid, pwd, database : {0} , {1}, {2}, {3}, {4}", server, port, uid,pwd, database );    
             
+           Console.WriteLine("LD Library path is "+   Environment.GetEnvironmentVariable("LD_LIBRARY_PATH");
             try
             {
                 DB2Connection connection = new DB2Connection("server=myserver:50000;uid=myuid;pwd=mypwd;database=mydb;SECURITY=SSL;");
