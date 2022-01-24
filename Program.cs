@@ -26,6 +26,7 @@ namespace DockerTester
                 DB2Connection connection = new DB2Connection("server="+server+":"+port+";uid="+uid+";pwd="+pwd+";database="+database+";");
                 Console.WriteLine("Connection string is "+   connection.ConnectionString);
                 connection.Open();
+                Console.WriteLine("Connection open ");
                 Console.WriteLine("Connection opened with server " + connection.ServerVersion);
             }
             catch (Exception ex)
