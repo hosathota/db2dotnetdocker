@@ -35,7 +35,7 @@ namespace DockerTester
             }
 
             Console.WriteLine("completed without error");
-            Console.ReadLine();
+     
         }
     }
 }
