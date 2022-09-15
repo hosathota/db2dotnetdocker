@@ -12,18 +12,22 @@ namespace DockerTester
             Console.WriteLine("Starting db2 app");
             string path = Directory.GetCurrentDirectory();
             Console.WriteLine("The current directory is {0}", path);                  
-            string server=Environment.GetEnvironmentVariable("server");
-            string port=Environment.GetEnvironmentVariable("port");
-            string uid=Environment.GetEnvironmentVariable("uid");
-            string pwd=Environment.GetEnvironmentVariable("pwd");
-            string database=Environment.GetEnvironmentVariable("database");
+            //string server=Environment.GetEnvironmentVariable("server");
+            //string port=Environment.GetEnvironmentVariable("port");
+            //string uid=Environment.GetEnvironmentVariable("uid");
+            //string pwd=Environment.GetEnvironmentVariable("pwd");
+            //string database=Environment.GetEnvironmentVariable("database");
             
-            Console.WriteLine("The connection details are server, port, uid, pwd, database : {0} , {1}, {2}, {3}, {4}", server, port, uid,pwd, database );    
+            string connectionstring=Environment.GetEnvironmentVariable("connectionstring");
+            
+            //Console.WriteLine("The connection details are server, port, uid, pwd, database : {0} , {1}, {2}, {3}, {4}", server, port, uid,pwd, database );    
+            //Console.WriteLine("The connection string is ", connectionstring );    
             
            Console.WriteLine("LD Library path is "+   Environment.GetEnvironmentVariable("LD_LIBRARY_PATH"));
             try
             {
-                DB2Connection connection = new DB2Connection("server="+server+":"+port+";uid="+uid+";pwd="+pwd+";database="+database+";security=ssl");
+                //DB2Connection connection = new DB2Connection("server="+server+":"+port+";uid="+uid+";pwd="+pwd+";database="+database+";security=ssl");
+                DB2Connection connection = new DB2Connection(connectionstring);
                 Console.WriteLine("Connection string is "+   connection.ConnectionString);
                 connection.Open();
                 Console.WriteLine("Connection open ");
